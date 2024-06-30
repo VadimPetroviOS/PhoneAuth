@@ -10,7 +10,7 @@
 		7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747272C30859F00E960A7 /* phoneAuthApp.swift */; };
 		7D47472C2C3085A300E960A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472B2C3085A300E960A7 /* Assets.xcassets */; };
 		7D47472F2C3085A300E960A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */; };
-		7D4747362C30879600E960A7 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747352C30879600E960A7 /* AuthorizationView.swift */; };
+		7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +18,7 @@
 		7D4747272C30859F00E960A7 /* phoneAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneAuthApp.swift; sourceTree = "<group>"; };
 		7D47472B2C3085A300E960A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7D4747352C30879600E960A7 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4747272C30859F00E960A7 /* phoneAuthApp.swift */,
-				7D4747352C30879600E960A7 /* AuthorizationView.swift */,
+				7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */,
 				7D47472B2C3085A300E960A7 /* Assets.xcassets */,
 				7D47472D2C3085A300E960A7 /* Preview Content */,
 			);
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */,
-				7D4747362C30879600E960A7 /* AuthorizationView.swift in Sources */,
+				7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
