@@ -11,6 +11,13 @@
 		7D47472C2C3085A300E960A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472B2C3085A300E960A7 /* Assets.xcassets */; };
 		7D47472F2C3085A300E960A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */; };
 		7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */; };
+		7D644F412C35423800F76DA4 /* PrimaryClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F402C35423800F76DA4 /* PrimaryClearTextField.swift */; };
+		7D644F4D2C358B8A00F76DA4 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 7D644F4C2C358B8A00F76DA4 /* SwiftUIIntrospect */; };
+		7D644F4F2C358B8A00F76DA4 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D644F4E2C358B8A00F76DA4 /* SwiftUIIntrospect-Dynamic */; };
+		7D644F512C358B8A00F76DA4 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 7D644F502C358B8A00F76DA4 /* SwiftUIIntrospect-Static */; };
+		7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */; };
+		7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */; };
+		7D644F5A2C36A1AF00F76DA4 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F592C36A1AF00F76DA4 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,10 @@
 		7D47472B2C3085A300E960A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationView.swift; sourceTree = "<group>"; };
+		7D644F402C35423800F76DA4 /* PrimaryClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryClearTextField.swift; sourceTree = "<group>"; };
+		7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationProtocol.swift; sourceTree = "<group>"; };
+		7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationViewModel.swift; sourceTree = "<group>"; };
+		7D644F592C36A1AF00F76DA4 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D644F4D2C358B8A00F76DA4 /* SwiftUIIntrospect in Frameworks */,
+				7D644F4F2C358B8A00F76DA4 /* SwiftUIIntrospect-Dynamic in Frameworks */,
+				7D644F512C358B8A00F76DA4 /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				7D4747272C30859F00E960A7 /* phoneAuthApp.swift */,
-				7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */,
+				7D644F522C369B6100F76DA4 /* PhoneAutorifation */,
+				7D644F402C35423800F76DA4 /* PrimaryClearTextField.swift */,
+				7D644F582C36A19700F76DA4 /* Extensions */,
 				7D47472B2C3085A300E960A7 /* Assets.xcassets */,
 				7D47472D2C3085A300E960A7 /* Preview Content */,
 			);
@@ -65,6 +81,32 @@
 				7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D644F522C369B6100F76DA4 /* PhoneAutorifation */ = {
+			isa = PBXGroup;
+			children = (
+				7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */,
+				7D644F532C369B8400F76DA4 /* ViewModel */,
+			);
+			path = PhoneAutorifation;
+			sourceTree = "<group>";
+		};
+		7D644F532C369B8400F76DA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */,
+				7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D644F582C36A19700F76DA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F592C36A1AF00F76DA4 /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +125,11 @@
 			dependencies = (
 			);
 			name = phoneAuth;
+			packageProductDependencies = (
+				7D644F4C2C358B8A00F76DA4 /* SwiftUIIntrospect */,
+				7D644F4E2C358B8A00F76DA4 /* SwiftUIIntrospect-Dynamic */,
+				7D644F502C358B8A00F76DA4 /* SwiftUIIntrospect-Static */,
+			);
 			productName = phoneAuth;
 			productReference = 7D4747242C30859F00E960A7 /* phoneAuth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 7D47471B2C30859E00E960A7;
+			packageReferences = (
+				7D644F4B2C358B8900F76DA4 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+			);
 			productRefGroup = 7D4747252C30859F00E960A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D644F5A2C36A1AF00F76DA4 /* StringExtensions.swift in Sources */,
+				7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */,
+				7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */,
 				7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */,
+				7D644F412C35423800F76DA4 /* PrimaryClearTextField.swift in Sources */,
 				7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +333,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +362,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +398,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D644F4B2C358B8900F76DA4 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/swiftui-introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D644F4C2C358B8A00F76DA4 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D644F4B2C358B8900F76DA4 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
+		};
+		7D644F4E2C358B8A00F76DA4 /* SwiftUIIntrospect-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D644F4B2C358B8900F76DA4 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Dynamic";
+		};
+		7D644F502C358B8A00F76DA4 /* SwiftUIIntrospect-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D644F4B2C358B8900F76DA4 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Static";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D47471C2C30859E00E960A7 /* Project object */;
 }
