@@ -7,7 +7,7 @@
 
 import Combine
 
-final class PhoneAuthorizationViewModel: PhoneAuthorizationProtocol {
+final class PhoneAuthorizationViewModel: PhoneAuthorization {
     
     @Published
     var text = ""

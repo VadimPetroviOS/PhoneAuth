@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension String {
-    func formatUserInput(pattern: String) -> String {
+public extension String {
+     func formatUserInput(pattern: String) -> String {
         var inputCollection = Array(self)
         var resultCollection: Array<Character> = []
         

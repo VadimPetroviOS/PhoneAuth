@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PhoneAuthorizationProtocol: ObservableObject {
+protocol PhoneAuthorization: ObservableObject {
     var text: String { get set }
     var isCorrectPhoneNumber: Bool { get set }
 }

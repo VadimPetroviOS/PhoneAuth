@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-private enum Constants {
-    static let contentSize: CGFloat = 48
-}
-
 public struct PrimaryClearTextField: View {
-    var wrongInputMessage: String?
-    var isHeaderUp: Bool
-    let content: TextFieldTrailingItem?
+    private var wrongInputMessage: String?
+    private let content: TextFieldTrailingItem?
 
     @State
     private var title: String
@@ -23,19 +18,17 @@ public struct PrimaryClearTextField: View {
     private var text: String
     
     @Binding
-    var isCorrectPhoneNumber: Bool
+    private var isCorrectPhoneNumber: Bool
 
     public init(
         _ title: String,
-        text: Binding<String>,
         wrongInputMessage: String? = nil,
-        isHeaderUp: Bool = false,
-        isCorrectPhoneNumber: Binding<Bool>,
-        content: TextFieldTrailingItem? = nil
+        content: TextFieldTrailingItem? = nil,
+        text: Binding<String>,
+        isCorrectPhoneNumber: Binding<Bool>
     ) {
         self.title = title
         self.wrongInputMessage = wrongInputMessage
-        self.isHeaderUp = isHeaderUp
         self.content = content
         _text = text
         _isCorrectPhoneNumber = isCorrectPhoneNumber
@@ -126,21 +119,6 @@ public struct PrimaryClearTextField: View {
     }
 }
 
-
-public struct TextFieldTrailingItem {
-    let image: Image
-    let action: (() -> Void)?
-
-    public init(image: Image, action: (() -> Void)?) {
-        self.image = image
-        self.action = action
-    }
-}
-
-public protocol AnyOptional {
-    var isNil: Bool { get }
-}
-
-extension Optional: AnyOptional {
-    public var isNil: Bool { self == nil }
+private enum Constants {
+    static let contentSize: CGFloat = 48
 }

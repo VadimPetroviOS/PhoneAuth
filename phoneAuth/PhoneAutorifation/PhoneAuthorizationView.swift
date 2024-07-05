@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import Utils
 
-struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
+struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
     
     @StateObject
     private var viewModel: ViewModel
     
     @State
-    var buttonTapped: Bool = false
+    private var buttonTapped: Bool = false
     
     init() where ViewModel == PhoneAuthorizationViewModel {
         _viewModel = StateObject(wrappedValue: PhoneAuthorizationViewModel())
@@ -30,7 +31,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
         }
     }
     
-    var backgroundView: some View {
+    private var backgroundView: some View {
         LinearGradient(
             gradient:
                 Gradient(colors: Constants.backgroundColor),
@@ -40,7 +41,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
         .ignoresSafeArea()
     }
     
-    var authorizationBackgroundView: some View {
+    private var authorizationBackgroundView: some View {
         RoundedRectangle(cornerRadius: 28)
             .fill(
                 LinearGradient(
@@ -54,7 +55,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
             .frame(width: 400, height: 429)
     }
     
-    var authorizationView: some View {
+    private var authorizationView: some View {
         VStack(spacing: 16) {
             authorizationTitleText
             userImage
@@ -64,35 +65,34 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
         }
     }
     
-    var authorizationTitleText: some View {
+    private var authorizationTitleText: some View {
         Text(Constants.autorization)
             .font(.title)
             .bold()
             .padding(.top, 24)
     }
     
-    var userImage: some View {
+    private var userImage: some View {
         Image(Constants.avatar)
             .resizable()
             .frame(width: 96, height: 96)
             .padding(.top, 12)
     }
     
-    var phoneNumberLoginText: Text {
+    private var phoneNumberLoginText: Text {
         Text(Constants.phoneNumberLogin)
             .font(.subheadline)
     }
     
-    var phoneField: some View {
+    private var phoneField: some View {
         PrimaryClearTextField(
             Constants.placeholder,
-            text: $viewModel.text,
-            wrongInputMessage: Constants.wrongMessage,
-            isCorrectPhoneNumber: $viewModel.isCorrectPhoneNumber,
-            content: .init(
+            wrongInputMessage: Constants.wrongMessage, content: .init(
                 image: Image(systemName: Constants.xmark),
                 action: { viewModel.text = "" }
-            )
+                ),
+                text: $viewModel.text,
+                isCorrectPhoneNumber: $viewModel.isCorrectPhoneNumber
         )
         .frame(width: 352, height: 48)
         .padding(.top, 16)
@@ -105,7 +105,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorizationProtocol>: View {
         
     }
     
-    var requestCodeButton: some View {
+    private var requestCodeButton: some View {
         Button {
             buttonTapped.toggle()
         } label: {
