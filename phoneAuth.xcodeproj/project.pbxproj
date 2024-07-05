@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747272C30859F00E960A7 /* phoneAuthApp.swift */; };
-		7D47472A2C30859F00E960A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747292C30859F00E960A7 /* ContentView.swift */; };
 		7D47472C2C3085A300E960A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472B2C3085A300E960A7 /* Assets.xcassets */; };
 		7D47472F2C3085A300E960A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */; };
+		7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */; };
+		7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */; };
+		7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */; };
+		7D644F622C37CAD800F76DA4 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 7D644F612C37CAD800F76DA4 /* Utils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D4747242C30859F00E960A7 /* phoneAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4747272C30859F00E960A7 /* phoneAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneAuthApp.swift; sourceTree = "<group>"; };
-		7D4747292C30859F00E960A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D47472B2C3085A300E960A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationView.swift; sourceTree = "<group>"; };
+		7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationProtocol.swift; sourceTree = "<group>"; };
+		7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationViewModel.swift; sourceTree = "<group>"; };
+		7D644F5F2C37C80B00F76DA4 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utils; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D644F622C37CAD800F76DA4 /* Utils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +42,10 @@
 		7D47471B2C30859E00E960A7 = {
 			isa = PBXGroup;
 			children = (
+				7D644F5E2C37C76E00F76DA4 /* Packages */,
 				7D4747262C30859F00E960A7 /* phoneAuth */,
 				7D4747252C30859F00E960A7 /* Products */,
+				7D644F602C37C94B00F76DA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4747272C30859F00E960A7 /* phoneAuthApp.swift */,
-				7D4747292C30859F00E960A7 /* ContentView.swift */,
+				7D644F522C369B6100F76DA4 /* PhoneAutorifation */,
 				7D47472B2C3085A300E960A7 /* Assets.xcassets */,
 				7D47472D2C3085A300E960A7 /* Preview Content */,
 			);
@@ -65,6 +74,39 @@
 				7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D644F522C369B6100F76DA4 /* PhoneAutorifation */ = {
+			isa = PBXGroup;
+			children = (
+				7D4747352C30879600E960A7 /* PhoneAuthorizationView.swift */,
+				7D644F532C369B8400F76DA4 /* ViewModel */,
+			);
+			path = PhoneAutorifation;
+			sourceTree = "<group>";
+		};
+		7D644F532C369B8400F76DA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */,
+				7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D644F5E2C37C76E00F76DA4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F5F2C37C80B00F76DA4 /* Utils */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		7D644F602C37C94B00F76DA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +125,9 @@
 			dependencies = (
 			);
 			name = phoneAuth;
+			packageProductDependencies = (
+				7D644F612C37CAD800F76DA4 /* Utils */,
+			);
 			productName = phoneAuth;
 			productReference = 7D4747242C30859F00E960A7 /* phoneAuth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +156,8 @@
 				Base,
 			);
 			mainGroup = 7D47471B2C30859E00E960A7;
+			packageReferences = (
+			);
 			productRefGroup = 7D4747252C30859F00E960A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D47472A2C30859F00E960A7 /* ContentView.swift in Sources */,
+				7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */,
+				7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */,
 				7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */,
+				7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -279,7 +328,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +357,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +393,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D644F612C37CAD800F76DA4 /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D47471C2C30859E00E960A7 /* Project object */;
 }

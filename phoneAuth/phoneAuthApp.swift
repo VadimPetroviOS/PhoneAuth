@@ -11,7 +11,7 @@ import SwiftUI
 struct phoneAuthApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhoneAuthorizationView()
         }
     }
 }
