@@ -29,6 +29,12 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
             }
             .foregroundColor(.white)
         }
+        .onTapGesture {
+            hideKeyboardOnTap()
+        }
+        .fullScreenCover(isPresented: $buttonTapped) {
+            OTPVerificationView(viewModel.text)
+        }
     }
     
     private var backgroundView: some View {
@@ -69,7 +75,6 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
         Text(Constants.autorization)
             .font(.title)
             .bold()
-            .padding(.top, 24)
     }
     
     private var userImage: some View {
@@ -79,7 +84,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
             .padding(.top, 12)
     }
     
-    private var phoneNumberLoginText: Text {
+    private var phoneNumberLoginText: some View  {
         Text(Constants.phoneNumberLogin)
             .font(.subheadline)
     }
@@ -98,7 +103,7 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
         .padding(.top, 16)
         .onChange(of: viewModel.text) { _ in
             viewModel.text = viewModel.text.formatUserInput(
-                pattern: Constants.placeholder
+                pattern: Constants.incorrectNumber
             )
         }
         .keyboardType(.numberPad)
@@ -108,15 +113,17 @@ struct PhoneAuthorizationView<ViewModel: PhoneAuthorization>: View {
     private var requestCodeButton: some View {
         Button {
             buttonTapped.toggle()
+            hideKeyboardOnTap()
         } label: {
             Text(Constants.requestCode)
                 .font(.headline)
         }
         .frame(width: 352, height: 48)
         .background(Constants.buttonColor)
-        .opacity(buttonTapped ? 0.8 : 1)
+        .opacity(!viewModel.isButtonDisabled ? 0.8 : 1)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.top, 8)
+        .disabled(!viewModel.isButtonDisabled)
     }
 }
 
@@ -128,6 +135,7 @@ private enum Constants {
     static let autorization = "Авторизация"
     static let phoneNumberLogin = "Вход по номеру телефона"
     static let placeholder = "+7 (___) ___-__-__"
+    static let incorrectNumber = "+7 (___) ___-__-_____"
     static let wrongMessage = "Некорректный формат номера"
     static let requestCode = "Запросить код"
     
