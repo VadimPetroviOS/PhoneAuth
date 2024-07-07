@@ -10,4 +10,5 @@ import Foundation
 protocol PhoneAuthorization: ObservableObject {
     var text: String { get set }
     var isCorrectPhoneNumber: Bool { get set }
+    var isButtonDisabled: Bool { get }
 }

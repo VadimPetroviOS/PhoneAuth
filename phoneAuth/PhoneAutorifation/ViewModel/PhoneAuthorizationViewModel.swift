@@ -17,6 +17,10 @@ final class PhoneAuthorizationViewModel: PhoneAuthorization {
     
     private(set) var cancellables = Set<AnyCancellable>()
     
+    var isButtonDisabled: Bool {
+        !isCorrectPhoneNumber && text.count > 17
+    }
+    
     init() {
         $text
             .dropFirst()
@@ -27,6 +31,8 @@ final class PhoneAuthorizationViewModel: PhoneAuthorization {
             .store(in: &cancellables)
     }
     
+    
+    
     private func validatePhone(_ enteredPhoneNumber: String) -> Bool {
         let phone = "+7 (098) 545-34-34"
         
@@ -34,8 +40,8 @@ final class PhoneAuthorizationViewModel: PhoneAuthorization {
             return true
         }
         
-        let prefix = phone.prefix(enteredPhoneNumber.count)
-        return prefix != enteredPhoneNumber
+        return false
     }
     
 }
+

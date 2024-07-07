@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2196302C3AA15E0028B8FA /* OTPVerificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D21962F2C3AA15E0028B8FA /* OTPVerificationProtocol.swift */; };
+		7D2196322C3AA27E0028B8FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2196312C3AA27E0028B8FA /* ContentView.swift */; };
 		7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4747272C30859F00E960A7 /* phoneAuthApp.swift */; };
 		7D47472C2C3085A300E960A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472B2C3085A300E960A7 /* Assets.xcassets */; };
 		7D47472F2C3085A300E960A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47472E2C3085A300E960A7 /* Preview Assets.xcassets */; };
@@ -14,9 +16,13 @@
 		7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */; };
 		7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */; };
 		7D644F622C37CAD800F76DA4 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 7D644F612C37CAD800F76DA4 /* Utils */; };
+		7D644F652C37E4F100F76DA4 /* OTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F642C37E4F100F76DA4 /* OTPVerificationView.swift */; };
+		7D644F6E2C394EF200F76DA4 /* OTPVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D644F6D2C394EF200F76DA4 /* OTPVerificationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D21962F2C3AA15E0028B8FA /* OTPVerificationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationProtocol.swift; sourceTree = "<group>"; };
+		7D2196312C3AA27E0028B8FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D4747242C30859F00E960A7 /* phoneAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4747272C30859F00E960A7 /* phoneAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneAuthApp.swift; sourceTree = "<group>"; };
 		7D47472B2C3085A300E960A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,6 +31,8 @@
 		7D644F542C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationProtocol.swift; sourceTree = "<group>"; };
 		7D644F562C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthorizationViewModel.swift; sourceTree = "<group>"; };
 		7D644F5F2C37C80B00F76DA4 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utils; sourceTree = "<group>"; };
+		7D644F642C37E4F100F76DA4 /* OTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationView.swift; sourceTree = "<group>"; };
+		7D644F6D2C394EF200F76DA4 /* OTPVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D21962E2C3A4D520028B8FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F6D2C394EF200F76DA4 /* OTPVerificationViewModel.swift */,
+				7D21962F2C3AA15E0028B8FA /* OTPVerificationProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D2196332C3AA28E0028B8FA /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				7D2196312C3AA27E0028B8FA /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		7D47471B2C30859E00E960A7 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +87,8 @@
 			children = (
 				7D4747272C30859F00E960A7 /* phoneAuthApp.swift */,
 				7D644F522C369B6100F76DA4 /* PhoneAutorifation */,
+				7D644F632C37E4CA00F76DA4 /* OTPVerification */,
+				7D2196332C3AA28E0028B8FA /* ContentView */,
 				7D47472B2C3085A300E960A7 /* Assets.xcassets */,
 				7D47472D2C3085A300E960A7 /* Preview Content */,
 			);
@@ -107,6 +134,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D644F632C37E4CA00F76DA4 /* OTPVerification */ = {
+			isa = PBXGroup;
+			children = (
+				7D644F642C37E4F100F76DA4 /* OTPVerificationView.swift */,
+				7D21962E2C3A4D520028B8FA /* ViewModel */,
+			);
+			path = OTPVerification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +221,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D644F572C369C3400F76DA4 /* PhoneAuthorizationViewModel.swift in Sources */,
+				7D644F6E2C394EF200F76DA4 /* OTPVerificationViewModel.swift in Sources */,
+				7D2196322C3AA27E0028B8FA /* ContentView.swift in Sources */,
+				7D644F652C37E4F100F76DA4 /* OTPVerificationView.swift in Sources */,
 				7D644F552C369BDE00F76DA4 /* PhoneAuthorizationProtocol.swift in Sources */,
+				7D2196302C3AA15E0028B8FA /* OTPVerificationProtocol.swift in Sources */,
 				7D4747282C30859F00E960A7 /* phoneAuthApp.swift in Sources */,
 				7D4747362C30879600E960A7 /* PhoneAuthorizationView.swift in Sources */,
 			);
